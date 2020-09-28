@@ -1,0 +1,34 @@
+[
+  {
+    "key": "1",
+    "title": "Singer Chat",
+    "folder": true,
+    "expanded": true,
+    "children": [
+      {
+        "key": "1_1",
+        "title": "Sub-item 1.1"
+      },
+      {
+        "key": "1_2",
+        "title": "Sub-item 1.2"
+      }
+    ]
+  },
+  {
+    "key": "2",
+    "title": "Group Chat",
+    "folder": true,
+    "expanded": true,
+    "children": [
+      {
+        "key": "2_1",
+        "title": "Sub-item 2.1"
+      },
+      {
+        "key": "2_2",
+        "title": "Sub-item 2.2"
+      }
+    ]
+  } 
+]

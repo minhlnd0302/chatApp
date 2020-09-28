@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "LoginSuccess";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.currentUser</title>
+    <link href="~/CSS/Styles.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <script src="~/JS/websocket.js"></script>
+
+    <script src="~/JS/chatWidget.js"></script>
+
+    <script src="~/JS/treeWidget.js"></script>
+
+    <script src="~/JS/functionjs.js"></script>
+
+    <script src="~/JS/HomeWidget.js"></script>
+
+
+    <link rel="stylesheet" href="~/Content/skin-win8-n/ui.fancytree.css">
+    <script src="~/Scripts/modules/jquery.fancytree.js"></script>
+
+    <link rel="stylesheet" href="~/Scripts/plupload/js/jquery.ui.plupload/css/jquery.ui.plupload.css">
+
+    <script type="text/javascript" src="~/Scripts/plupload/js/plupload.full.min.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/plupload/js/jquery.ui.plupload/jquery.ui.plupload.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/plupload/js/moxie.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/plupload/js/plupload.dev.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/plupload/js/jquery.ui.plupload/jquery.ui.plupload.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            var data = @Html.Raw(Json.Encode(ViewBag.TreeData));
+            debugger
+            sessionStorage.setItem('treeData', JSON.stringify(data));
+            $(document.body).homeWidget({ treeData: data });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="upload"></div>
+</body>
+
+</html>
+
